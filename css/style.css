@@ -1,0 +1,111 @@
+/* Définition des ../fonts personnalisées */
+
+@font-face
+{
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Regular.ttf');
+    src: url('../fonts/Raleway-Black.ttf') format('truetype'),
+         url('../fonts/Raleway-BlackItalic.ttf') format('truetype'),
+         url('../fonts/Raleway-Bold.ttf') format('truetype'),
+         url('../fonts/Raleway-BoldItalic.ttf') format('truetype'),
+         url('../fonts/Raleway-ExtraBold.ttf') format('truetype'),
+         url('../fonts/Raleway-ExtraBoldItalic.ttf') format('truetype'),
+         url('../fonts/Raleway-ExtraLight.ttf') format('truetype'),
+         url('../fonts/Raleway-ExtraLightItalic.ttf') format('truetype'),
+         url('../fonts/Raleway-ExtraLightItalic.ttf') format('truetype'),
+         url('../fonts/Raleway-Italic-VariableFont_wght.ttf') format('truetype'),
+         url('../fonts/Raleway-Italic.ttf') format('truetype'),
+         url('../fonts/Raleway-Light.ttf') format('truetype'),
+         url('../fonts/Raleway-LightItalic.ttf') format('truetype'),
+         url('../fonts/Raleway-SemiBold.ttf') format('truetype'),
+         url('../fonts/Raleway-SemiBoldItalic.ttf') format('truetype'),
+         url('../fonts/Raleway-Thin.ttf') format('truetype'),
+         url('../fonts/Raleway-ThinItalic.ttf') format('truetype'),
+         url('../fonts/Raleway-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Modif pour header */
+
+header
+{
+    display: flex;
+}
+
+nav ul
+{
+    list-style-type: none;
+    display: flex;
+}
+
+
+/* Modif pour section 1 */
+
+#tags
+{
+    display: flex;
+}
+
+#section_1
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#section_1_flex
+{
+    display: flex;
+}
+
+#hebergement_ligne_1
+{
+    display: flex;
+    justify-content: center;
+    background-color: red;
+}
+
+#hebergement_ligne_2
+{
+    display: flex;
+    justify-content: center;
+    background-color: blue;
+}
+
+.populaire
+{
+    display: flex;
+    justify-content: center;
+    background-color: green;
+}
+
+/* Modif pour section 2 */
+
+#section_2
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#activites
+{
+    display: flex;
+    background-color: red;
+}
+
+.activites
+{
+    display: flex;
+}
+
+/* Modif pour footer */
+
+footer
+{
+    display: flex;
+}
+
+footer ul 
+{
+    list-style-type: none;
+}
