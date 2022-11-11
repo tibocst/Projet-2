@@ -1,6 +1,6 @@
 /* Définition des ../fonts personnalisées */
 
-@font-face
+/* @font-face
 {
     font-family: 'Raleway';
     src: url('../fonts/Raleway-Regular.ttf');
@@ -24,6 +24,11 @@
          url('../fonts/Raleway-VariableFont_wght.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+} */
+
+body
+{
+    margin: 0;
 }
 
 /* Modif pour header */
@@ -33,24 +38,64 @@ header
     display: flex;
 }
 
-nav ul
+#logo
+{
+    flex: 1;
+}
+
+#logo img
+{
+    margin-top: 42px;
+    margin-left: 55px;
+    max-width: 61.09px;
+    max-height: 19px;
+}
+
+#nav_header
+{
+    justify-content: center;
+}
+
+#nav_header ul
 {
     list-style-type: none;
     display: flex;
+    padding: 0;
+    margin: 0;
 }
 
+#nav_header > ul > a
+{
+    color: inherit;
+    text-decoration: inherit;
+    text-align: center;
+}
 
-/* Modif pour section 1 */
+#nav_header > ul > a > li:hover
+{
+    color: #0065FC;
+    border-top: 2px solid #0065FC;
+}
+
+#nav_header > ul > a > li
+{
+    border-top: 2px solid white;
+    padding: 40px;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Modif pour recherche */
 
 #tags
 {
     display: flex;
 }
 
-#section_1
+/* Modif pour section 1 */
+
+#section_1_flex > img
 {
-    display: flex;
-    flex-direction: column;
+    position: relative;
 }
 
 #section_1_flex
@@ -58,24 +103,56 @@ nav ul
     display: flex;
 }
 
+#hebergement
+{
+    flex: 1;
+}
+
+#populaire
+{
+    flex: 1;
+}
+
 #hebergement_ligne_1
 {
     display: flex;
-    justify-content: center;
+    flex: 1;
     background-color: red;
 }
 
 #hebergement_ligne_2
 {
     display: flex;
-    justify-content: center;
+    flex: 1;
     background-color: blue;
+}
+
+#hebergement_ligne_1 > div
+{
+    display: flex;
+    flex: 1;
+    margin: 10px;
+}
+
+#hebergement_ligne_2 > div
+{
+    display: flex;
+    flex: 1;
+    margin: 10px;
+}
+
+.hebergement
+{
+}
+
+.hebergement > div
+{
+    position: absolute;
+    background-color: white;
 }
 
 .populaire
 {
-    display: flex;
-    justify-content: center;
     background-color: green;
 }
 
