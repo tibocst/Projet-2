@@ -31,16 +31,37 @@ body
     margin: 0;
 }
 
+#div_milieu
+{
+    margin-left: 55px;
+}
+
+#div_milieu h1
+{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: large;
+}
+
+#div_milieu p
+{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: smaller;
+}
+
+i
+{
+    color: #0065FC;
+}
+
+
 /* Modif pour header */
 
 header
 {
-    display: flex;
-}
-
-#logo
-{
-    flex: 1;
+    display:flex;
+    justify-content: space-between;
 }
 
 #logo img
@@ -69,6 +90,7 @@ header
     color: inherit;
     text-decoration: inherit;
     text-align: center;
+    flex: 1;
 }
 
 #nav_header > ul > a > li:hover
@@ -84,11 +106,130 @@ header
     font-family: 'Raleway', sans-serif;
 }
 
+/* Modif général pour search + tags + les titres */
+
 /* Modif pour recherche */
 
+#div_titre_search_tags > :nth-child(1)
+{
+    margin-bottom: 8px;
+}
+
+#div_titre_search_tags > :nth-child(2)
+{
+    margin: 0;
+}
+
+#search 
+{
+    display: flex;
+    margin-top: 20px;
+}
+
+#search > label
+{
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border-bottom-left-radius: 30%;
+    border-top-left-radius: 30%;
+}
+
+#search > label > i
+{
+    color: black;
+}
+
+#search > :nth-child(2)
+{
+    padding-left: 16px;
+    padding-right: 46px;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #f2f2f2;
+    border-top: 1px solid #f2f2f2;
+    margin: 0;
+}
+
+#search > :nth-child(2)::placeholder
+{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: medium;
+    color: black;
+}
+
+#search > :nth-child(3)
+{
+    background-color: #0065FC;
+    color: white;
+    border: none;
+    border-radius: 0 15px 15px 0;
+    padding: 14px 16px 14px 16px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: medium;
+}
+
+/* Modif pour filtres/tags */
 #tags
 {
     display: flex;
+    margin-top: 12px;
+}
+
+#tags > h2
+{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: medium;
+    margin: auto;
+    flex: 0;
+}
+
+#tags_div
+{
+    display: flex;
+    flex: 1;
+}
+
+#tags_div div
+{
+    border: 2px solid #d9d9d9;
+    border-radius: 25px;
+    padding: 12px 20px 12px 20px;
+    margin: 20px;
+}
+
+#tags_div div:hover
+{
+    background-color: #deebff;
+}
+
+#tags_div div p
+{
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 0.9em;
+}
+
+#tags_div div i
+{
+    margin-right: 10px;
+}
+
+#div_search_tags > p > span
+{
+    margin-left: 11px;
+}
+
+#div_search_tags > p > i
+{
+    padding: 10px;
+    border: 1px solid #deebff;
+    border-radius: 100%;
 }
 
 /* Modif pour section 1 */

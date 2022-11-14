@@ -21,12 +21,12 @@
         <nav id="nav_header">
             <ul>
                 <a href="#">
-                    <li>
+                    <li id="li_hebergement">
                         Hébergements
                     </li>
                 </a>
                 <a href="#">
-                    <li>
+                    <li id="li_activites">
                         Activités
                     </li>
                 </a>
@@ -34,38 +34,40 @@
         </nav>
     </header>
 
-    <div>
-        <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-        <p>En plein centre-ville ou en pleine nature</p>
-        <div>
-            <div id="search">
-                
-                <label for="search"><i class="fa-solid fa-location-dot"></i></label>
-                <input type="search" id="search" name="search"/>
-                <input type="submit" value="Rechercher" />
-                
+    <div id="div_milieu">
+        <div id="div_titre_search_tags">
+            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+            <p>En plein centre-ville ou en pleine nature</p>
+            <div id="div_search_tags">
+                <div id="search">
+                    
+                    <label for="search"><i class="fa-solid fa-location-dot"></i></label>
+                    <input type="search" id="search" name="search" placeholder="Marseille, France"/>
+                    <input type="submit" value="Rechercher"/>
+                    
+                </div>
+                <div id="tags">
+                    <h2>Filtres</h2>
+                    <div id="tags_div">
+                        <div>
+                            <p><i class="fa-solid fa-money-bill-wave fa-xl"></i>Économique</p>
+                        </div>
+                        <div>
+                            <p><i class="fa-solid fa-person fa-xl"></i>Familial</p>
+                        </div>
+                        <div>
+                            <p><i class="fa-solid fa-heart fa-xl"></i>Romantique</p>
+                        </div>
+                        <div>
+                            <p><i class="fa-solid fa-dog fa-xl"></i>Animaux autorisés</p>
+                        </div>
+                    </div>
+                </div>
+                <p><i class="fa-solid fa-info fa-xs"></i><span>Plus de 500 logements sont disponibles dans cette ville</p>
             </div>
-            <div id="tags">
-                <h2>Filtres</h2>
-                <div>
-                    <p><i class="fa-solid fa-money-bill-wave"></i>Économique</p>
-                </div>
-                <div>
-                    <p><i class="fa-solid fa-person"></i>Familial</p>
-                </div>
-                <div>
-                    <p><i class="fa-solid fa-heart"></i>Romantique</p>
-                </div>
-                <div>
-                    <p><i class="fa-solid fa-dog"></i>Animaux autorisés</p>
-                </div>
-            </div>
-            <p><i class="fa-solid fa-info"></i>Plus de 500 logements sont disponibles dans cette ville</p>
         </div>
 
         <section>
-            
-            
             <div id="section_1_flex">
                 <div id="hebergement">
                     <h1>Hébergements à Marseille</h1>
