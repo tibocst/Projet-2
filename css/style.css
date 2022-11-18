@@ -1,31 +1,5 @@
 /* Définition des ../fonts personnalisées */
 
-/* @font-face
-{
-    font-family: 'Raleway';
-    src: url('../fonts/Raleway-Regular.ttf');
-    src: url('../fonts/Raleway-Black.ttf') format('truetype'),
-         url('../fonts/Raleway-BlackItalic.ttf') format('truetype'),
-         url('../fonts/Raleway-Bold.ttf') format('truetype'),
-         url('../fonts/Raleway-BoldItalic.ttf') format('truetype'),
-         url('../fonts/Raleway-ExtraBold.ttf') format('truetype'),
-         url('../fonts/Raleway-ExtraBoldItalic.ttf') format('truetype'),
-         url('../fonts/Raleway-ExtraLight.ttf') format('truetype'),
-         url('../fonts/Raleway-ExtraLightItalic.ttf') format('truetype'),
-         url('../fonts/Raleway-ExtraLightItalic.ttf') format('truetype'),
-         url('../fonts/Raleway-Italic-VariableFont_wght.ttf') format('truetype'),
-         url('../fonts/Raleway-Italic.ttf') format('truetype'),
-         url('../fonts/Raleway-Light.ttf') format('truetype'),
-         url('../fonts/Raleway-LightItalic.ttf') format('truetype'),
-         url('../fonts/Raleway-SemiBold.ttf') format('truetype'),
-         url('../fonts/Raleway-SemiBoldItalic.ttf') format('truetype'),
-         url('../fonts/Raleway-Thin.ttf') format('truetype'),
-         url('../fonts/Raleway-ThinItalic.ttf') format('truetype'),
-         url('../fonts/Raleway-VariableFont_wght.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-} */
-
 body
 {
     margin: 0;
@@ -64,7 +38,7 @@ header
     justify-content: space-between;
 }
 
-#logo img
+#logo > img
 {
     margin-top: 42px;
     margin-left: 55px;
@@ -74,36 +48,38 @@ header
 
 #nav_header
 {
-    justify-content: center;
+    flex-basis: 400px;
 }
 
 #nav_header ul
 {
     list-style-type: none;
     display: flex;
-    padding: 0;
-    margin: 0;
+    padding: inherit;
+    margin: inherit;
 }
 
 #nav_header > ul > a
 {
+    flex: 1;
+    display: flex;
     color: inherit;
     text-decoration: inherit;
-    text-align: center;
+}
+
+#nav_header > ul > a > li
+{
     flex: 1;
+    border-top: 2px solid white;
+    padding: 40px;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
 }
 
 #nav_header > ul > a > li:hover
 {
     color: #0065FC;
     border-top: 2px solid #0065FC;
-}
-
-#nav_header > ul > a > li
-{
-    border-top: 2px solid white;
-    padding: 40px;
-    font-family: 'Raleway', sans-serif;
 }
 
 /* Modif général pour search + tags + les titres */
@@ -191,10 +167,11 @@ header
 #tags_div
 {
     display: flex;
+    flex-wrap: wrap;
     flex: 1;
 }
 
-#tags_div div
+#tags_div > div
 {
     border: 2px solid #d9d9d9;
     border-radius: 25px;
@@ -238,30 +215,29 @@ header
 {
     display: flex;
     margin-right: 50px;
+    justify-content: space-between;
 }
 
 #section_1_flex img
 {
-    width: 100%;
-    object-fit: cover;
+    /* width: 100%;
+    object-fit: cover; */
 }
+
+/* Modif pour hebergement à Marseille */
 
 #hebergement
 {
-    display: flex;
-    flex-direction: column;
     flex: 2;
     background-color: #f2f2f2;
-    margin-right: 20px;
-    padding: 40px 40px 0 40px;
-    padding-left: 40px;
-    padding-right: 40px;
+    /* padding: 40px 40px 0 40px; */
     border-radius: 20px;
 }
 
 #hebergement > h1
 {
-    margin: 0 0 23px 0;
+    /* margin: 0 0 23px 0; */
+    
 }
 
 #hebergement > h2
@@ -273,16 +249,12 @@ header
     padding: 0;
 }
 
-#hebergement_ligne_1
+#hebergement_carte
 {
-    display: flex;
-    flex: 1;
-}
-
-#hebergement_ligne_2
-{
-    display: flex;
-    flex: 1;
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: -20px 0 0 -20px;
+    width: calc(100% + 20px);
 }
 
 .hebergement
@@ -290,36 +262,24 @@ header
     display: flex;
     flex-direction: column;
     border: 4px solid white;
-    margin: 0 0 30px 0;
+    margin: 12px 0 0 12px;
     border-radius: 15px;
     flex: 1;
 }
 
-.hebergement > div
+.hebergement > div:nth-child(1)
+{
+    border-radius: 15px 15px 0 0; 
+    height: 100%;
+}
+
+.hebergement > div:nth-child(2)
 {
     background-color: white;
     flex: 1;
 }
 
-.hebergement > img
-{
-    border-radius: 15px 15px 0 0; 
-    height: 200px;
-}
-
-.hebergement:nth-child(2)
-{
-    margin-left: 31px;
-    margin-right: 31px;
-}
-
-.hebergement:nth-child(5)
-{
-    margin-left: 31px;
-    margin-right: 31px;
-}
-
-.hebergement > div > h2
+.hebergement > div:nth-child(2) > h2
 {
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
@@ -327,15 +287,17 @@ header
     margin: 8px 0 4.5px 12px;
 }
 
-.hebergement > div > p
+.hebergement > div:nth-child(2) > p
 {
     margin: 4.5px 0 4.5px 12px;
 }
 
-.hebergement > div > p:nth-of-type(2) > i:nth-of-type(5)
+.hebergement > div:nth-child(2) > p:nth-of-type(2) > i:nth-of-type(5)
 {
     color: #f2f2f2;
 }
+
+/* Modif pour hebergement populaire */
 
 #populaire
 {
@@ -343,12 +305,11 @@ header
     flex: 0.7;
     flex-direction: column;
     background-color: #f2f2f2;
-    margin-left: 20px;
     padding: 40px 40px 34px 37px;
     border-radius: 20px;
 }
 
-#populaire > div
+#populaire > :nth-child(1)
 {
     display: flex;
 }
@@ -384,14 +345,14 @@ header
 {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    flex: 2;
     background-color: white;
     justify-content: space-between;
 }
 
 .populaire > img
 {
-    flex: 0;
+    flex: 1;
     border-radius: 15px 0 0 15px;
     height: 200px;
     min-width: 300px;
