@@ -2,7 +2,9 @@
 
 body
 {
-    margin: 0;
+
+    margin: auto;
+    max-width: 1400px;
 }
 
 #div_milieu
@@ -30,6 +32,10 @@ i
     color: #0065FC;
 }
 
+section
+{
+    gap: 60px;
+}
 
 /* Modif pour header */
 
@@ -150,6 +156,7 @@ header
 }
 
 /* Modif pour filtres/tags */
+
 #tags
 {
     display: flex;
@@ -172,7 +179,13 @@ header
     flex: 1;
 }
 
-#tags_div > div
+#tags_div > a
+{
+    color: inherit;
+    text-decoration: inherit;
+}
+
+#tags_div > a > div
 {
     border: 2px solid #d9d9d9;
     border-radius: 25px;
@@ -185,7 +198,7 @@ header
     background-color: #deebff;
 }
 
-#tags_div div p
+#tags_div div > p
 {
     margin: 0;
     font-family: 'Raleway', sans-serif;
@@ -193,9 +206,10 @@ header
     font-size: 0.9em;
 }
 
-#tags_div div i
+#tags_div div > p > i
 {
     margin-right: 10px;
+    color: #0065FC;
 }
 
 #div_search_tags > p > span
@@ -229,15 +243,18 @@ header
 
 #hebergement
 {
-    flex: 2;
+    flex: 1;
     background-color: #f2f2f2;
     padding: 40px;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 #hebergement > h1
 {
     margin-top: 0;
+    flex: 0.1;
 }
 
 #hebergement_carte
@@ -246,6 +263,14 @@ header
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 10px 1%;
+    flex: 1;
+}
+
+#hebergement_carte > a
+{
+    width: 30%;
+    color: inherit;
+    text-decoration: inherit;
 }
 
 .hebergement
@@ -254,7 +279,6 @@ header
     flex-direction: column;
     border: 4px solid white;
     border-radius: 15px;
-    width: 30%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
@@ -267,7 +291,7 @@ header
 {
     border-radius: 15px 15px 0 0;
     width: 100%;
-    height: 190px;
+    height: 12vh;
     object-position: center;
 }
 
@@ -301,13 +325,19 @@ header
     color: #f2f2f2;
 }
 
+#hebergement > div:nth-child(3)
+{
+    display: flex;
+    flex: 0.1;
+}
+
 #hebergement > div:nth-child(3) > h2
 {
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
     font-size: medium;
     padding: 0;
-    vertical-align: middle;
+    align-self: center;
 }
 
 /* Modif pour hebergement populaire */
@@ -315,11 +345,12 @@ header
 #populaire
 {
     display: flex;
-    flex: 0.7;
+    flex: 0.4;
     flex-direction: column;
     background-color: #f2f2f2;
     padding: 40px;
     border-radius: 20px;
+    gap: 26px;
 }
 
 #populaire > div:nth-child(1)
@@ -330,12 +361,13 @@ header
 #populaire > div > h1
 {
     flex: 1;
-    margin: 0 0 26px 0;
+    margin: 0;
 }
 
 #populaire_colonne
 {
     display: flex;
+    flex: 1;
     flex-direction: column;
     gap: 5%;
 }
@@ -346,8 +378,9 @@ header
     border-radius: 15px;
     border: 4px solid white;
     flex: 1;
-    height: 28.3%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    height: 30%;
+    background-color: white;
 }
 
 .populaire:hover
@@ -355,21 +388,26 @@ header
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-.populaire > div:nth-child(2)
+.populaire > div:nth-child(1)
 {
-    display: flex;
-    flex-direction: column;
-    flex: 2;
+    flex: 1;
     background-color: white;
-    justify-content: space-between;
 }
 
 .populaire > div:nth-child(1) > img
 {
-    flex: 1;
     border-radius: 15px 0 0 15px;
-    height: 100%;
-    width: 220px;
+    height: 130px;
+    width: 100%;
+}
+
+.populaire > div:nth-child(2)
+{
+    display: flex;
+    flex-direction: column;
+    flex: 1.5;
+    background-color: white;
+    justify-content: space-between;
 }
 
 .populaire > div:nth-child(2) > div > h2
@@ -406,7 +444,7 @@ header
 #activites
 {
     display: flex;
-    gap: 1%;
+    gap: 3.5%;
 }
 
 #activites > div
@@ -434,7 +472,7 @@ header
 #activites > div > div:nth-child(1) > img
 {
     width: 100%;
-    height: 800px;
+    height: 40vh;
     border-radius: 20px 20px 0 0;
     object-fit: cover;
 }
@@ -453,6 +491,7 @@ header
     margin-left: 5%;
     margin-top: 10px;
 }
+
 /* Modif pour footer */
 
 footer
@@ -460,13 +499,12 @@ footer
     display: flex;
     margin: 0 50px 0 50px;
     background-color: #f2f2f2;
-    padding: ;
 }
 
-footer > div
+/* footer > div
 {
 
-}
+} */
 
 footer ul 
 {
