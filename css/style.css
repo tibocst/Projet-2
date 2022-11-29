@@ -416,6 +416,7 @@ header
     width: 25%;
     box-shadow: 10px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 20px;
 }
 
 #activites > div:hover
@@ -427,6 +428,7 @@ header
 {
     background-color: white;
     flex: 1;
+    border-radius: 20px 20px 0 0;
 }
 
 #activites > div > div:nth-child(1) > img
@@ -456,6 +458,14 @@ header
 footer
 {
     display: flex;
+    margin: 0 50px 0 50px;
+    background-color: #f2f2f2;
+    padding: ;
+}
+
+footer > div
+{
+
 }
 
 footer ul 
