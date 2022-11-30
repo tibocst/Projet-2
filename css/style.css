@@ -372,7 +372,6 @@ header
     display: flex;
     flex: 1;
     flex-direction: column;
-    align-items: space-between;
     gap: 5%;
 }
 
@@ -518,8 +517,9 @@ footer a
     color: inherit;
     text-decoration: inherit;
     font-family: 'Raleway', sans-serif;
-    font-weight: 600;
-    font-size: smaller;
+    font-weight: 500;
+    font-size: medium;
+    font-size: 0.9em;
 }
 
 footer > div
@@ -539,7 +539,7 @@ footer > div > h1
 
 .footer_list li:not(:last-child)
 {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 
 .footer_list > ul 
@@ -553,18 +553,198 @@ footer > div > h1
 
 @media screen and (max-width: 992px)
 {
-    
+    #tags
+    {
+        flex-wrap: wrap;
+    }
 
+    #tags_div
+    {
+        flex-wrap: nowrap;
+    }
 
+    #section_1_flex
+    {
+        flex-direction: column;
+    }
 
+    #section_1_flex i
+    {
+        font-size: 0.8em;
+    }
+
+    #populaire_colonne
+    {
+        flex-direction: row;
+        gap: 3%;
+    }
+
+    #activites > div > div:nth-child(1) > img
+    {
+        height: 20vh;
+    }
 }
 
 /* Media queries mobile */
 
 @media screen and (max-width: 768px)
 {
+    body
+    {
+        margin: 0;
+    }
 
+    header
+    {
+        flex-direction: column;
+        justify-content: inherit;
+    }
 
+    #logo
+    {
+        display: flex;
+        align-self: center;
+        flex-basis: 80px;
+        align-items: center;
+    }
 
+    #logo > img
+    {
+        max-width: 100px;
+        max-height: 60px;
+        margin: 0;
+    }
 
+    #nav_header
+    {
+        flex-basis: inherit;
+        flex: 1;
+    }
+
+    #nav_header > ul > a > li
+    {
+        border-top: inherit;
+        border-bottom: 2px solid white;
+    }
+
+    #nav_header > ul > a > li:hover
+    {
+        border-top: inherit;
+        border-bottom: 2px solid #0065FC;
+    }
+
+    #div_titre_search_tags > h1
+    {
+        margin-left: 20px;
+    }
+
+    #div_titre_search_tags > :nth-child(2)
+    {
+        margin: 0 0 0 20px;
+    }
+
+    #div_search_tags > form
+    {
+        display: flex;
+        justify-content: center;
+    }
+
+    #tags
+    {
+        flex-direction: column;
+    }
+
+    #tags > h2
+    {
+        margin: inherit;
+        margin-left: 20px;
+    }
+
+    #tags_div > a
+    {
+        flex: 1;
+    }
+
+    #tags_div > a > div 
+    {
+        flex-wrap: wrap;
+        margin: 0;
+    }
+
+    #tags_div > a > div > p
+    {
+        display: flex;
+    }
+
+    #div_milieu
+    {
+        margin: 0;
+    }
+
+    #section_1_flex
+    {
+        flex-direction: column-reverse;
+    }
+
+    #populaire
+    {
+        border-radius: inherit;
+    }
+
+    #populaire_colonne
+    {
+        flex-direction: column;
+        row-gap: 12px;
+    }
+
+    #hebergement
+    {
+        border-radius: inherit;
+        background-color: white;
+    }
+
+    #hebergement_carte
+    {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: inherit;
+    }
+
+    #hebergement_carte > a
+    {
+        width: inherit;
+    }
+
+    .hebergement > div:nth-child(1) > img
+    {
+        height: 25vh;
+    }
+    
+    #hebergement > div:nth-child(3)
+    {
+        display: none;
+    }
+
+    #section_2 > h1 {
+        margin-left: 20px;
+    }
+
+    #activites
+    {
+        flex-direction: column;
+        row-gap: 24px;
+        padding: 0 20px 0 20px;
+    }
+
+    #activites > div
+    {
+        width: inherit;
+    }
+
+    footer
+    {
+        margin: 0;
+        flex-direction: column;
+        row-gap: 40px;
+    }
 }
