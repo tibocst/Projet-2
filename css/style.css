@@ -548,3 +548,23 @@ footer > div > h1
     text-align: inherit;
     display: inline;
 }
+
+/* Media queries tablette */
+
+@media screen and (max-width: 992px)
+{
+    
+
+
+
+}
+
+/* Media queries mobile */
+
+@media screen and (max-width: 768px)
+{
+
+
+
+
+}
