@@ -299,6 +299,31 @@ header
     flex: 0.1;
 }
 
+#hebergement > div:nth-child(3)
+{
+    display: flex;
+    flex: 0.1;
+    flex-basis: 34px;
+}
+
+#hebergement > div:nth-child(3) > a
+{
+    height: fit-content;
+    color: inherit;
+    text-decoration: inherit;
+    
+}
+
+#hebergement > div:nth-child(3) > a > h2
+{
+    margin: auto;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: medium;
+    padding: 0;
+    margin: 0;
+}
+
 #hebergement_carte
 {
     display: flex;
@@ -370,22 +395,6 @@ header
     color: #f2f2f2;
 }
 
-#hebergement > div:nth-child(3)
-{
-    display: flex;
-    flex: 0.1;
-}
-
-#hebergement > div:nth-child(3) > h2
-{
-    font-family: 'Raleway', sans-serif;
-    font-weight: 800;
-    font-size: medium;
-    padding: 0;
-    margin: 0;
-    margin-top: 14px;
-}
-
 /* Modif pour hebergement populaire */
 
 #populaire
@@ -418,6 +427,13 @@ header
     gap: 5%;
 }
 
+#populaire_colonne > a
+{
+    height: 30%;
+    color: inherit;
+    text-decoration: inherit;
+}
+
 .populaire
 {
     display: flex;
@@ -425,7 +441,6 @@ header
     border: 4px solid white;
     flex: 1;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    height: 30%;
     background-color: white;
 }
 
@@ -501,29 +516,36 @@ article > h1
     gap: 3.5%;
 }
 
-#activites > div
+#activites > a
+{
+    width: 25%;
+    color: inherit;
+    text-decoration: inherit;
+}
+
+#activites > a > div
 {
     display: flex;
     flex-direction: column;
-    width: 25%;
+    
     box-shadow: 10px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 20px;
 }
 
-#activites > div:hover
+#activites > a > div:hover
 {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-#activites > div > div:nth-child(1)
+#activites > a > div > div:nth-child(1)
 {
     background-color: white;
     flex: 1;
     border-radius: 20px 20px 0 0;
 }
 
-#activites > div > div:nth-child(1) > img
+#activites > a > div > div:nth-child(1) > img
 {
     width: 100%;
     height: 40vh;
@@ -648,9 +670,30 @@ footer > div > h1
         gap: 3%;
     }
 
+    #populaire_colonne > a
+    {
+        flex: 1;
+    }
+
+    .populaire > div:nth-child(2) > div > h2
+    {
+        margin-left: 9px;
+        margin-top: 6px;
+    }
+
+    .populaire > div:nth-child(2) > div > p:nth-of-type(1)
+    {
+        margin-left: 9px;
+    }
+
+    .populaire > div:nth-child(2) > p:nth-of-type(1)
+    {
+        margin-left: 9px;
+    }
+
     /* Modif pour balise article */
 
-    #activites > div > div:nth-child(1) > img
+    #activites > a > div > div:nth-child(1) > img
     {
         height: 20vh;
     }
@@ -735,6 +778,7 @@ footer > div > h1
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
     }
 
     #search > :nth-child(4)
@@ -780,8 +824,8 @@ footer > div > h1
     #tags_div
     {
         display: flex;
-        padding: 0 20px;
-        gap: 20px 20px;
+        padding: 0 2vw;
+        gap: 20px 1vw;
         flex-wrap: wrap;
         flex: 1;
     }
@@ -793,7 +837,7 @@ footer > div > h1
 
     #tags_div > a > div 
     {
-        min-width: 27vw;
+        width: 29vw;
         flex: 1;
         margin: 0;
         padding: 20px 10px;
@@ -801,7 +845,7 @@ footer > div > h1
 
     #tags_div > a > div > div
     {
-        gap: 12px;
+        gap: 5px;
     }
 
     #tags_div > a > div > div > p
@@ -878,7 +922,7 @@ footer > div > h1
         padding: 0 20px 0 20px;
     }
 
-    #activites > div
+    #activites > a
     {
         width: inherit;
     }
