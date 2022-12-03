@@ -1,4 +1,4 @@
-/* Définition des ../fonts personnalisées */
+/* Modif générales */
 
 body
 {
@@ -103,6 +103,11 @@ header
     margin: 0;
 }
 
+#div_search_tags > form
+{
+    display: flex;
+}
+
 #search 
 {
     display: flex;
@@ -146,6 +151,20 @@ header
 #search > :nth-child(3)
 {
     background-color: #0065FC;
+    border-radius: 0 15px 15px 0;
+    padding: 16px;
+    border: inherit;
+    display: none;
+}
+
+#search > :nth-child(3) > i
+{
+    color: white;
+}
+
+#search > :nth-child(4)
+{
+    background-color: #0065FC;
     color: white;
     border: none;
     border-radius: 0 15px 15px 0;
@@ -162,6 +181,7 @@ header
 {
     display: flex;
     margin-top: 12px;
+    gap: 10px;
 }
 
 #tags > h2
@@ -178,20 +198,24 @@ header
     display: flex;
     flex-wrap: wrap;
     flex: 1;
+    gap: 20px;
 }
 
 #tags_div > a
-{
+{  
+    display: flex;
     color: inherit;
     text-decoration: inherit;
+    
 }
 
 #tags_div > a > div
 {
+    display: flex;
     border: 2px solid #d9d9d9;
     border-radius: 25px;
-    padding: 12px 20px 12px 20px;
-    margin: 20px;
+    padding: 12px 15px;
+    
 }
 
 #tags_div div:hover
@@ -199,18 +223,34 @@ header
     background-color: #deebff;
 }
 
-#tags_div div > p
+#tags_div > a > div > div
+{
+    display: flex;
+    gap: 10px;
+}
+
+#tags_div > a > div > div > p
 {
     margin: 0;
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
     font-size: 0.9em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
-#tags_div div > p > i
+#tags_div div > div > i
 {
-    margin-right: 10px;
+    display: flex;
+    align-items: center;
     color: #0065FC;
+}
+
+#div_search_tags > p
+{
+    margin-left: 10px;
 }
 
 #div_search_tags > p > span
@@ -405,6 +445,7 @@ header
 {
     border-radius: 15px 0 0 15px;
     width: 100%;
+    height: 14vh;
 }
 
 .populaire > div:nth-child(2)
@@ -439,9 +480,9 @@ header
     color: #f2f2f2;
 }
 
-/* Modif pour section 2 */
+/* Modif pour balise article */
 
-#section_2
+article
 {
     display: flex;
     flex-direction: column;
@@ -449,7 +490,7 @@ header
     margin-bottom: 60px;
 }
 
-#section_2 > h1
+article > h1
 {
     margin-top: 0;
 }
@@ -501,8 +542,8 @@ header
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
     font-size: 0.9em;
-    margin-left: 5%;
-    margin-top: 10px;
+    margin: 20px;
+    margin-top: 16px;
 }
 
 /* Modif pour footer */
@@ -556,6 +597,16 @@ footer > div > h1
 
 @media screen and (max-width: 992px)
 {
+
+    /* Modif général pour search + tags + les titres */
+
+    /* Modif pour filtres/tags */
+
+    #div_search_tags > p
+    {
+        margin-left: 0;
+    }
+
     #tags
     {
         flex-wrap: wrap;
@@ -564,7 +615,20 @@ footer > div > h1
     #tags_div
     {
         flex-wrap: nowrap;
+        gap: 10px;
     }
+
+    #tags_div > a > div
+    {
+        padding: 12px 10px;
+    }
+
+    #tags_div > a > div > div
+    {
+        gap: 4px;
+    }
+
+    /* Modif pour section 1 */
 
     #section_1_flex
     {
@@ -576,11 +640,15 @@ footer > div > h1
         font-size: 0.8em;
     }
 
+    /* Modif pour hebergement populaire */
+
     #populaire_colonne
     {
         flex-direction: row;
         gap: 3%;
     }
+
+    /* Modif pour balise article */
 
     #activites > div > div:nth-child(1) > img
     {
@@ -592,10 +660,20 @@ footer > div > h1
 
 @media screen and (max-width: 768px)
 {
+    /* Modif générales */
+
     body
+    {
+        flex: 1;
+        margin: 0;
+    }
+    
+    #div_milieu
     {
         margin: 0;
     }
+
+    /* Modif pour header */
 
     header
     {
@@ -636,6 +714,35 @@ footer > div > h1
         border-bottom: 2px solid #0065FC;
     }
 
+    /* Modif général pour search + tags + les titres */
+
+    /* Modif pour recherche */
+
+    #div_titre_search_tags > form
+    {
+        flex: 1;
+        justify-content: center;
+    }
+
+    #search 
+    {
+        flex: 1;
+        padding: 0 22px 0 22px;
+    }
+
+    #search > :nth-child(3)
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #search > :nth-child(4)
+    {
+        display: none;
+        justify-content: space-around;
+    }
+
     #div_titre_search_tags > h1
     {
         margin-left: 20px;
@@ -644,6 +751,13 @@ footer > div > h1
     #div_titre_search_tags > :nth-child(2)
     {
         margin: 0 0 0 20px;
+    }
+
+    /* Modif pour filtres/tags */
+
+    #div_search_tags > p
+    {
+        margin-left: 15px;
     }
 
     #div_search_tags > form
@@ -663,6 +777,15 @@ footer > div > h1
         margin-left: 20px;
     }
 
+    #tags_div
+    {
+        display: flex;
+        padding: 0 20px;
+        gap: 20px 20px;
+        flex-wrap: wrap;
+        flex: 1;
+    }
+
     #tags_div > a
     {
         flex: 1;
@@ -670,24 +793,30 @@ footer > div > h1
 
     #tags_div > a > div 
     {
-        flex-wrap: wrap;
+        min-width: 27vw;
+        flex: 1;
         margin: 0;
+        padding: 20px 10px;
     }
 
-    #tags_div > a > div > p
+    #tags_div > a > div > div
     {
-        display: flex;
+        gap: 12px;
     }
 
-    #div_milieu
+    #tags_div > a > div > div > p
     {
-        margin: 0;
+        white-space: nowrap;
     }
+
+    /* Modif pour section 1 */
 
     #section_1_flex
     {
         flex-direction: column-reverse;
     }
+
+    /* Modif pour hebergement populaire */
 
     #populaire
     {
@@ -699,6 +828,8 @@ footer > div > h1
         flex-direction: column;
         row-gap: 12px;
     }
+
+    /* Modif pour hebergement à Marseille */
 
     #hebergement
     {
@@ -728,7 +859,15 @@ footer > div > h1
         display: none;
     }
 
-    #section_2 > h1 {
+    /* Modif pour balise article */
+
+    article > h1
+    {
+        margin-left: 20px;
+    }
+
+    #article > h1 
+    {
         margin-left: 20px;
     }
 
@@ -743,6 +882,8 @@ footer > div > h1
     {
         width: inherit;
     }
+
+    /* Modif pour footer */
 
     footer
     {
