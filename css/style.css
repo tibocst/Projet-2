@@ -2,7 +2,6 @@
 
 body
 {
-
     margin: auto;
     max-width: 1400px;
 }
@@ -209,7 +208,6 @@ header
     display: flex;
     color: inherit;
     text-decoration: inherit;
-    
 }
 
 #tags_div > a > div
@@ -218,7 +216,6 @@ header
     border: 2px solid #d9d9d9;
     border-radius: 25px;
     padding: 12px 15px;
-    
 }
 
 #tags_div div:hover
@@ -241,7 +238,6 @@ header
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 #tags_div div > div > i
@@ -316,7 +312,6 @@ header
     height: fit-content;
     color: inherit;
     text-decoration: inherit;
-    
 }
 
 #hebergement > div:nth-child(3) > a > h2
